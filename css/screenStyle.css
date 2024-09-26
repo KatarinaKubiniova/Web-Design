@@ -1,0 +1,265 @@
+/*V tomto súbore definujte vlastnosti štýlov pre všetky stránky vášho statického blogu pre zobrazenie na obrazovke.*/
+/*Please, define here the style for all the pages of your static blog for displaying on screen.*/
+*{
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    box-sizing: border-box;
+   /*border: solid;*/
+}
+
+body {
+    font-size: 105%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal; 
+    font-weight: normal; 
+    text-align: justify; 
+    color: black;
+    background-color: #ffcbba;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.95;
+   }
+   
+   a {
+    display: inline-block;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 500ms;
+  }
+
+  a:hover {
+    color: whitesmoke;
+    transform: scale(1.1);
+  }
+
+  :required {
+    border: 2px solid black;
+  }
+
+  #opnFrm {
+      align-items: center;
+      background: #ffe2d4;
+      padding: 3%;
+
+  }
+
+input:invalid, textarea:invalid{
+    border-color: red;
+    /*color: red;*/
+}
+
+   #article1-body{
+       display: grid;
+       grid-template-columns: 5% 10% auto 10% 5%;
+       grid-template-rows: 10% 10% auto 5%;
+   }
+
+   #article1-header{
+        grid-column-start: 3;  
+        grid-row-start: 1;      
+    }
+
+    #article1-nav{
+        grid-column-start: 2;
+        grid-row-start: 2;
+       /* grid-row-start: 2;*/
+        margin-right: 1%;
+    }
+
+    #article1-main{
+        grid-column-start: 3;
+        grid-row: 2 / 4;
+    }
+
+    #article1-footer{
+        grid-column: 1 / -1;
+        grid-row-start: 5;
+    }
+
+    .article1-bottomsection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /*INDEX*/
+    #index-body{
+        display: grid;
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: auto 15% ;
+    }
+ 
+     #index-main{
+         grid-column-start: 2;
+         grid-row-start: 1;
+     }
+
+
+     #index-footer{
+         grid-column-start: 2;
+         grid-row-start: 2;
+     }
+
+     .index-bottomsection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /*ARTICLE 2*/
+    #article2-body{
+        display: grid;
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: auto;
+    }
+ 
+     #article2-main{
+         grid-column-start: 2;
+         grid-row-start: 1;
+     }
+
+     .article2-bottomsection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*ARTICLE 3*/
+    #article3-body{
+        display: grid;
+        grid-template-columns: 20% auto 20%;
+        grid-template-rows: auto;
+    }
+ 
+     #article3-main{
+         grid-column-start: 2;
+         grid-row-start: 1;
+     }
+
+     .article3-bottomsection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    h2{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    h3{
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    h4{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    img{
+        border: solid 2px rgb(25, 27, 25);
+        margin: 2%;
+        /*margin: 2%;
+        margin-left: 25%;
+        margin-right: 25%;
+        float: left;*/
+        }
+    
+    
+    footer{
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+
+    nav{
+        margin-top: 3%;
+    }
+    
+    
+    h1{
+        margin-bottom: 3%;
+        text-align: center;
+        animation-name: animacia;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    ul{
+        /*margin-left: 4%;*/
+        list-style-type: none;
+    }
+    
+    
+    table{
+        text-align: center;
+        border: solid 2px rgb(6, 7, 6);
+        border-collapse: collapse;
+        margin-top: 2%;
+        
+    }
+    tr, th, td{
+        border: solid 2px rgb(18, 22, 19);
+    }
+    
+    
+    /*menšia obrazovka*/
+    @media (max-width: 731px) /*and (min-resolution: 1.8dppx)*/{
+
+        #article1-body{
+            display: grid;
+            grid-template-columns: 2% auto 2%;
+            grid-template-rows: 5% 5% auto 10% 5%;
+        }
+
+        #article1-nav{
+            grid-row-start: 1;
+            grid-column-start: 2;
+        }
+
+        #article1-header{
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+
+        #article1-main{
+            grid-row-start: 3;
+            grid-column: 2;
+        }
+
+        #article1-aside{
+            grid-row: 4/5;
+            grid-column-start: 2;
+            margin: 0;
+
+        }
+
+        #article1-footer{
+            grid-row-start: 5;
+            grid-column-start: 2;
+        }
+
+        #article1-media-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+       h2{
+           margin-top: 3%;
+       }
+    }
+
+    @keyframes animacia{
+        from{color: aqua;}
+        to{color: blueviolet;}
+    }
+    
+   
+       
+       

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="sk">  
+<head>
+    <meta charset="UTF-8" />
+    <title>Mačky</title>
+    <link rel="stylesheet" href="css/screenStyle.css" type="text/css" media="screen">
+    <link rel="stylesheet"  href="css/printStyle.css" media="print" />
+  </head>
+  
+  <body id="index-body">
+    <main id="index-main">
+    
+    <canvas id="smajlikPlatno" width="120" height="120">
+    </canvas>
+    <script>
+    let platno = document.getElementById('smajlikPlatno');
+    let context = platno.getContext('2d');
+    context.strokeStyle = "#000000";
+    context.fillStyle = "#FFDD00";
+    context.beginPath();
+    context.arc(60,60,50,0,Math.PI*1,true);
+    context.closePath();
+    context.stroke();
+    context.fill();
+
+    context.fillStyle = "#000000";
+    context.beginPath();
+    context.arc(60,60,30,0,Math.PI*1,true);
+    context.closePath();
+    context.stroke();
+    context.fill();
+
+    context.fillStyle = "#FFFFFF";
+    context.beginPath();
+    context.arc(50,60,5,0,Math.PI*1,true);
+    context.arc(70,60,5,0,Math.PI*1,true);
+    context.closePath();
+    context.stroke();
+    context.fill();
+    </script>
+    <h1>Mačky</h1>
+
+    <p>
+    Volám sa Katarína Kubiniová a toto je môj blog o mačkách. Považujem sa za veľkého fanušíka mačiek už od detských čias
+    a momentálne vlastním 6 mačiek. V tomto blogu sa venujem rôznym zaujímavostiam o mačkách, ako sú známe plemená či anatómia
+    mačky.
+  </p>
+
+      <div>
+        <h2>Témy blogu</h2>
+      </div>
+      <div class="Najznámejšie plemená mačiek">
+        <a href="./article1.html"><h3>Plemená mačiek</h3></a>
+      </div> 
+      <div class="Slávne mačky">
+        <a href="./article2.html"><h3>Slávne mačky</h3></a>
+      </div>
+      <div class="Anatómia mačky">
+        <a href="./article3.html"><h3>Anatómia mačky</h3></a>
+      </div>
+
+      <article  id="artOpnFrm">
+        <h3>Váš názor</h3>
+        <p>
+            Vyjadrite, čo si myslíte o mojej stránke.
+        </p>
+        <br>
+        <form id="opnFrm">
+      
+            <label for="nameElm">Vaše meno:</label>
+            <input type="text" name="login" id="nameElm" size="25" maxlength="50" placeholder="Tu vložte Vaše meno." required />
+            <br>
+            <br>
+            <label for="emailElm">Váš email:</label>
+            <input type = "email" name = "email" id="emailElm" size="35" maxlength="40" placeholder="Tu vložte Váš email (xxx@gmail.com)" required/>
+            <br>
+            <br>
+            <label for="picture">Obrázok:</label>
+            <input id = "picture" type="url" name="picture" placeholder="Tu vložte obrázok alebo url." size="30" pattern="https?://.+">
+            <br>
+            <br>
+            <p>
+              Od 1 (najhoršie) do 5 (najlepšie) ohodnoťte stránku.
+          </p>
+                <label for="radio1">1</label>
+                <input id="radio1" type="radio" name="radiobox" value ="1">
+                <label for="radio2">2</label>
+                <input id="radio2" type="radio" name="radiobox" value="2">
+                <label for="radio3">3</label>
+                <input id="radio3" type="radio" name="radiobox" value="3">
+                <label for="radio4">4</label>
+                <input id="radio4" type="radio" name="radiobox" value="4">
+                <label for="radio5">5</label>
+                <input id="radio5" type="radio" name="radiobox" value="5">
+            <br>
+            <br>
+            <p>
+              O ktorých plemenách mačiek by ste sa radi dozvedeli viac na tejto stránke? 
+           </p>
+            <label for="checkBox1">Perzská mačka</label>
+            <input id="checkBox1" type="checkbox" name="checkbox">
+            <label for="checkBox2">Ragdoll</label>
+            <input id="checkBox2" type="checkbox" name="checkbox">
+            <label for="checkBox3">Munchkin</label>
+            <input id="checkBox3" type="checkbox" name="checkbox">
+            <br>
+            <br>
+
+            <label for="opnElm">Váš názor:</label>
+            <br>
+            <textarea name="comment" id="opnElm" cols="50" rows="5" placeholder="Tu vyjadrite, čo si myslíte." required></textarea>
+            <br>
+            <br>
+      
+            <label for="keywords">Zvoľte kľúčové slovo: </label>
+                   <input type="text" id="keywords" list="keywordsElm" size="25" name="datalist" placeholder="Vyberte/napíšte kľúčové slovo.">
+                      <datalist id="keywordsElm">
+                        <option value="plemená">
+                        <option value="anatómia">
+                        <option value="slávne mačky">
+                    </datalist>
+            <br>
+            <br>
+
+            <button type="submit">SEND</button>
+            <button type="reset">RESET</button>
+      
+        </form>
+
+        <div id="opinionsContainer">
+
+        </div>
+    
+      </article>
+</main>
+
+<script id="mTmplOneOpinion" type="text/template">
+  <section>
+      <h3>{{name}} <i>{{createdDate}}</i></h3>
+      <p>{{email}}</p>
+      <p>{{comment}}</p>
+      {{#picture}}<img src="{{picture}}"/>{{/picture}}
+      {{#rating}}<p> Hodnotenie stránky: {{rating}}.</p>{{/rating}}
+      {{#topics}}<p>Témy: {{topics}}</p>{{/topics}}
+      {{#keyWord}}<p>Kľúčové slová: {{keyWord}}</p>{{/keyWord}}
+  </section>
+</script>
+
+  <footer id="index-footer">
+    <p id="bottom_p">V prípade záujmu zdieľať so mnou tento koníček, napíšte na môj mail <a href="mailto:katarina.kubiniova@student.tuke.sk">Katarína Kubiniová</a>
+      .</p>
+  </footer>
+
+  <script type = "module" src="js/FormLStorageHtmlMstch.js">
+
+  </script>
+
+  </body>
+</html>

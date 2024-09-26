@@ -1,0 +1,31 @@
+/*V tomto súbore definujte vlastnosti štýlov pre všetky stránky vášho statického blogu pre tlač.*/
+/*Please, define here the style for all the pages of your static blog for printing.*/
+
+html{
+    font-family: "Times New Roman", serif;
+}
+
+h1{
+    text-align: center;
+}
+
+head{
+    text-align: center;
+}
+
+table{
+    margin-top: 30%;
+    border: solid 2px rgb(6, 7, 6);
+}
+
+tr, th, td{
+    border: solid 2px rgb(18, 22, 19);
+}
+
+#index-footer{
+    display: none;
+}
+
+div, aside, nav, a{
+    display: none;
+}

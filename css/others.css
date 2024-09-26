@@ -1,0 +1,119 @@
+img{
+    border: solid 2px rgb(25, 27, 25);
+    margin: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    float: left;
+    }
+
+main{
+    float: left;
+    width: 60%;
+}
+
+aside{
+    width: 20%;
+    margin-left: 2%;
+    float: right;
+    text-align: left;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+nav{
+    margin-right: 2%;
+    float: left;
+    width: 16%;
+}
+
+canvas{
+    margin-left: 5%;
+}
+
+h1{
+    width:100%;
+    text-align: center;
+}
+
+ol{
+    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+ul{
+    margin-left: 4%;
+    list-style-type: none;
+}
+
+p{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+table{
+    text-align: center;
+    width: 70%;
+    float: left;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    border: solid 2px rgb(6, 7, 6);
+    border-collapse: collapse;
+    
+}
+tr, th, td{
+    border: solid 2px rgb(18, 22, 19);
+    padding: 20px;
+}
+
+.obr{
+    margin: 0%;
+    padding: 0%;
+}
+   @media only screen and (min-width: 30px) and (max-width: 1400px) {
+    body{
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 100%;
+    }
+}
+    
+   
+   @media only screen and (min-width: 1401px){
+    body{
+     padding-left: 12%;
+     padding-right: 12%;
+    }
+}
+
+   
+   hr{
+    border-style:solid;
+    border-width:1px;
+    color: rgb(32, 35, 209);
+   }
+   
+   a:link, a:visited{
+    text-decoration: none;
+    color:#3437ec;
+   }
+   
+   a:hover{
+    text-decoration: underline;
+    color:#5F9800;
+   }
+   
+   *{
+    margin: 0;
+    border-spacing: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 73, 40);
+    /*border: solid;*/
+}
